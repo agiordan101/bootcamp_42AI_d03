@@ -6,7 +6,7 @@ import random
 class NumPyCreator:
     def __init__(self):
         pass
-    
+
     def from_list(self, lst):
         if isinstance(lst, list):
             return np.array(lst)
@@ -52,7 +52,7 @@ class NumPyCreator:
 
 
 npc = NumPyCreator()
-print(npc.from_list([[1,2,3],[6,3,4]]))
+print(npc.from_list([[1, 2, 3], [6, 3, 4]]))
 print(npc.from_tuple(("a", "b", "c")))
 print(npc.from_iterable(range(5)))
 

@@ -3,19 +3,21 @@ from matplotlib import image
 from matplotlib import pyplot
 from os import path
 
+
 class ImageProcessor:
     def __init__(self):
         pass
-    
+
     def load(self, path_file):
         if path.exists(path_file):
             array = np.array(image.imread(path_file))
-            print("Shape of img : ({}, {})".format(array.shape[0], array.shape[1]))
+            print("Shape of img : ({}, {})".format(array.shape[0],
+                                                   array.shape[1]))
             return array
         else:
             print("Path is incorrect")
             return None
-    
+
     def display(self, array):
         try:
             image.imsave("img_create.png", array)
